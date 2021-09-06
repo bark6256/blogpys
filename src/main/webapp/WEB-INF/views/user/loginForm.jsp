@@ -7,12 +7,13 @@
 <form action="/login" method="post">
   <div class="container">
     <label for="username"><b>아이디</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Username" name="username" value="${cookie.username.value}" required>
 
     <label for="password"><b>비밀번호</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
 
 	<button type="submit" class="btn btn-primary">로그인</button>
+	<input type="checkbox" checked="checked" name="remember"> 아이디 기억하기
 </form>
 
 

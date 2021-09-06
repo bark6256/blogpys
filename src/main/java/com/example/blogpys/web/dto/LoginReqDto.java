@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class LoginReqDto {
 	private String username;
 	private String password;
-
+	private boolean remember;
 }

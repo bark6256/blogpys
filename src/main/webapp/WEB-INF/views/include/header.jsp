@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <style>
-ul {
+ul.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -12,11 +13,11 @@ ul {
   background-color: #333;
 }
 
-li {
+ul.menu li {
   float: left;
 }
 
-li a {
+ul.menu li a {
   display: block;
   color: white;
   text-align: center;
@@ -24,7 +25,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+ul.menu li a:hover:not(.active) {
   background-color: #111;
 }
 
@@ -62,8 +63,16 @@ footer {
 </head>
 <body>
 
-<ul>
+<ul class="menu">
   <li><a class="active" href="/home">메인</a></li>
+  <c:if test="${sessionScope.principal.username eq null}">
   <li><a href="/loginForm">로그인</a></li>
   <li><a href="/signupForm">회원가입</a></li>
+  </c:if>
+  <c:if test="${sessionScope.principal.username ne null}">
+  <li><a href="#">글쓰기</a></li>
+  <li><a href="/userInfoForm">회원정보</a></li>
+  <li><a href="/logout">로그아웃</a></li>
+  </c:if>
+  
 </ul>
