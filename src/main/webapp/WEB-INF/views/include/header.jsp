@@ -64,6 +64,6 @@ footer {
 
 <ul>
   <li><a class="active" href="/home">메인</a></li>
-  <li><a href="#">로그인</a></li>
+  <li><a href="/loginForm">로그인</a></li>
   <li><a href="/signupForm">회원가입</a></li>
 </ul>

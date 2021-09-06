@@ -3,10 +3,10 @@
 
 <%@ include file="include/header.jsp"%>
 <br>
-<h2>메인페이지</h2>
+<h1>메인페이지</h1>
 <hr>
 
-
+<h2>${sessionScope.principal.username}</h2>
 
 <br>
 <%@ include file="include/footer.jsp"%>
